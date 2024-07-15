@@ -46,9 +46,9 @@ namespace Reddit.Repositories
             return sortTerm switch
             {
             "positivity" => post => (post.Upvotes) / (post.Upvotes + post.Downvotes),
-            "popular" => post => post.Upvotes + post.Downvotes,
-             _ => post => post.Id
-         };
+
+            "popular" => post => post.Upvotes + post.Downvotes, _ => post => post.Id
+            };
         }
     }
 }
